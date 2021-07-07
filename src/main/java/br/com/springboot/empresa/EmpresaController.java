@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/clientes")
-public class ClienteController {
+@RequestMapping("/empresa")
+public class EmpresaController {
 
     @Autowired
-    private ClienteRepository clienteRepository;
+    private EmpresaRepository empresaRepository;
 
     @GetMapping
-    public List<Cliente> list() {
-        return clienteRepository.findAll();
+    public List<Empresa> list() {
+        return empresaRepository.findAll();
     }
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Cliente adicionar(@RequestBody Cliente cliente){
-        return clienteRepository.save(cliente);
+    public Empresa adicionar(@RequestBody Empresa empresa){
+        return empresaRepository.save(empresa);
     }
 }

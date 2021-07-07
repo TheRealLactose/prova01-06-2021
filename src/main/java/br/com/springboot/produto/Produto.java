@@ -1,19 +1,18 @@
-package br.com.springboot.tarefas;
+package br.com.springboot.empresa;
 
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Data
 @Entity
-public class Tarefas {
+public class Produto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String tarefaa;
+    private String produto;
 
 
 }

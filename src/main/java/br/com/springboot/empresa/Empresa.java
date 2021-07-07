@@ -1,14 +1,13 @@
 package br.com.springboot.cliente;
 
-import br.com.springboot.tarefas.Tarefas;
+import br.com.springboot.tarefas.Produto;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Data
 @Entity
-public class Cliente {
+public class Empresa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +17,7 @@ public class Cliente {
     private String nome;
 
     @ManyToOne
-    private Tarefas tarefafazer;
+    private Produto produtoempresa;
 
 
 }
